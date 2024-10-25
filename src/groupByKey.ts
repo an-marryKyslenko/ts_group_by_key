@@ -9,7 +9,9 @@ export function groupByKey<T>(items: T[], key: keyof T): GroupsMap<T> {
     if (!acc[value]) {
       acc[value] = [];
     }
+
     acc[value].push(item);
+    
     return acc;
   }, {});
 }
